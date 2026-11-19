@@ -410,7 +410,7 @@ def create_red_agent_advance():
         return agent, runner
 
     raise RuntimeError(
-        "RED_TEAM_PROVIDER phải là openai hoặc gemini. Xem .env.example."
+        "RED_TEAM_PROVIDER phải là openai, gemini hoặc openrouter. Xem .env.example."
     )
 
 

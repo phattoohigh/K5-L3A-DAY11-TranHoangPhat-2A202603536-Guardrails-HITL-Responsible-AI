@@ -1,0 +1,17 @@
+{
+  "total_requests": 21,
+  "blocked_requests": 12,
+  "block_rate": 0.5714285714285714,
+  "rate_limit_hits": 3,
+  "judge_checks": 0,
+  "judge_fails": 0,
+  "judge_fail_rate": 0.0,
+  "alerts": [
+    {
+      "metric": "block_rate",
+      "value": 0.5714285714285714,
+      "threshold": 0.5,
+      "message": "Request block rate reached the configured threshold."
+    }
+  ]
+}

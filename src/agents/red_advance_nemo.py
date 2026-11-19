@@ -37,6 +37,8 @@ from agents.security_boundary import contains_secret, normalize_for_security
 from core.config import (
     DEMO_SECRETS,
     PROVIDER_GEMINI,
+    PROVIDER_OPENROUTER,
+    OPENROUTER_BASE_URL,
     get_red_model,
     get_red_provider,
 )
@@ -236,6 +238,14 @@ def _model_entry(provider: str, model: str) -> dict:
             "model": model,
             "api_key_env_var": "GOOGLE_API_KEY",
             "parameters": {"base_url": GEMINI_OPENAI_BASE_URL},
+        }
+    if provider == PROVIDER_OPENROUTER:
+        return {
+            "type": "main",
+            "engine": "openai",
+            "model": model,
+            "api_key_env_var": "OPENROUTER_API_KEY",
+            "parameters": {"base_url": OPENROUTER_BASE_URL},
         }
     return {
         "type": "main",
